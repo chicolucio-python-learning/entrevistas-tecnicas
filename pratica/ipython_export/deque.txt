@@ -1,0 +1,39 @@
+>>> from collections import deque
+>>> numbers = deque(range(5))
+>>> numbers
+deque([0, 1, 2, 3, 4])
+>>> len(numbers)
+5
+>>> numbers.append(5)
+>>> numbers
+deque([0, 1, 2, 3, 4, 5])
+>>> numbers.pop()
+5
+>>> numbers
+deque([0, 1, 2, 3, 4])
+>>> numbers.appendleft(-1)
+>>> numbers
+deque([-1, 0, 1, 2, 3, 4])
+>>> numbers.popleft()
+-1
+>>> numbers
+deque([0, 1, 2, 3, 4])
+>>> numbers.extend(range(5, 9))
+>>> numbers
+deque([0, 1, 2, 3, 4, 5, 6, 7, 8])
+>>> numbers.extendleft(range(-10, -5))
+>>> numbers
+deque([-6, -7, -8, -9, -10, 0, 1, 2, 3, 4, 5, 6, 7, 8])
+>>> buffer = deque(maxlen=3)
+>>> buffer
+deque([])
+>>> buffer.extend(range(3))
+>>> buffer
+deque([0, 1, 2])
+>>> buffer.append(3)
+>>> buffer
+deque([1, 2, 3])
+>>> buffer.appendleft(0)
+>>> buffer
+deque([0, 1, 2])
+>>> %history -o -p -f deque.txt

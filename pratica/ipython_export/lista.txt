@@ -1,0 +1,87 @@
+Operações constantes
+
+>>> lst = list(range(11))
+>>> lst
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+>>> lst[0]
+0
+>>> lst[-1]
+10
+>>> lst[-1] = 11
+>>> lst
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 11]
+>>> ls.append(12)
+>>> lst.append(12)
+>>> lst
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12]
+>>> lst.pop()
+12
+>>> lst
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 11]
+>>> len(lst)
+11
+
+Operações lineares
+>>> for v in lst: print(v)
+>>> 2 in lst
+True
+>>> 12 in lst
+False
+>>> lst.index(11)
+10
+>>> lst.count(11)
+1
+>>> lst.append(12)
+>>> lst.append(12)
+>>> lst
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 12]
+>>> lst.count(12)
+2
+>>> lst[1:7]
+[1, 2, 3, 4, 5, 6]
+>>> lst2 = list(range(13, 16))
+>>> lst + lst2
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 12, 13, 14, 15]
+>>> lst2.extend(lst)
+>>> lst2
+[13, 14, 15, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 12]
+>>> [0] * 10
+[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+>>> list(reversed(lst))
+[12, 12, 11, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
+>>> lst
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 12]
+>>> lst.reverse()
+>>> lst
+[12, 12, 11, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
+>>> lst.insert(0, 13)
+>>> lst
+[13, 12, 12, 11, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
+>>> lst.pop(0)
+13
+>>> lst
+[12, 12, 11, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
+>>> from random import shuffle
+>>> shuffle(lst)
+>>> lst
+[5, 12, 7, 11, 6, 3, 1, 0, 4, 9, 12, 8, 2]
+>>> 'Chico Lucio'.split()
+['Chico', 'Lucio']
+>>> ','.join(_)
+'Chico,Lucio'
+>>> _.split(',')
+['Chico', 'Lucio']
+
+Operações sublineares
+
+>>> lst
+[5, 12, 7, 11, 6, 3, 1, 0, 4, 9, 12, 8, 2]
+>>> sorted(lst)
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 12]
+>>> lst.sort()
+>>> lst
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 12]
+>>> lst.sort(reverse=True)
+>>> lst
+[12, 12, 11, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
+>>> %history -o -p -f lista.txt

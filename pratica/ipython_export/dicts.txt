@@ -1,0 +1,23 @@
+>>> d = {'pt_BR': 'Portugues Brasileiro',
+... 'en_US': 'Ingles Americano'}
+...
+>>> d
+{'pt_BR': 'Portugues Brasileiro', 'en_US': 'Ingles Americano'}
+>>> d['en'] = 'Ingles'
+>>> d
+{'pt_BR': 'Portugues Brasileiro', 'en_US': 'Ingles Americano', 'en': 'Ingles'}
+>>> d['en']
+'Ingles'
+>>> d['en'] = 'Inglês'
+>>> d
+{'pt_BR': 'Portugues Brasileiro', 'en_US': 'Ingles Americano', 'en': 'Inglês'}
+>>> d.pop()  # vai dar erro
+>>> d.pop('en_US')
+'Ingles Americano'
+>>> d
+{'pt_BR': 'Portugues Brasileiro', 'en': 'Inglês'}
+>>> for k in d: print(k)
+>>> for k in d.keys(): print(k)
+>>> for v in d.values(): print(v)
+>>> for k, v in d.items(): print(k, v)
+>>> %history -o -p -f dicts.txt
